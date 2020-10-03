@@ -1,0 +1,73 @@
+body {
+    background-color: gainsboro;
+}
+
+.content-area {
+    margin: 30px;
+}
+
+/* Image */
+.image-canvas {
+    overflow: auto;
+    height: 500px;
+    width: 100%;
+}
+
+
+/* Toolbox */
+.toolbox-tile {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+    text-align: center;
+}
+
+.btn-area {
+    cursor: pointer;
+}
+
+.toolbox-title {
+    font-size: 1.3em;
+    padding-bottom: 10px;
+    font-weight: 400;
+}
+
+/* Labels */
+.label-box {
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.selected-label {
+    padding-right: 8px;
+    background-color: #388e3c;
+    color: white;
+}
+
+.unselected-label {
+    padding-right: 8px;
+    background-color: gainsboro;
+}
+
+.unselected-label:hover {
+    background-color: #388e3c;
+    color: white;
+}
+
+/* File list */
+.filename-row {
+    height: 40px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.selected-filename-row {
+    background-color: gainsboro;
+}
+
+.filelist-box {
+    height: 350px;
+    overflow-y: scroll;
+}
