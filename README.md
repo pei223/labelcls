@@ -1,6 +1,10 @@
 ## labelcls
 Image classification annotation tool.
 
+<img src="labelcls.png">
+<br><br><br>
+
+
 ## Setup
 ```
 pip install -r requirements.txt
