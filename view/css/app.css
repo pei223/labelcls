@@ -22,6 +22,12 @@ body {
     align-items: center;
     height: 110px;
     text-align: center;
+    border-top: 1px solid gainsboro;
+    border-left: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+}
+.toolbox-tile:hover {
+    background-color: gainsboro;
 }
 
 .btn-area {
@@ -61,6 +67,12 @@ body {
     height: 40px;
     padding: 5px;
     cursor: pointer;
+    border-top: 1px solid gainsboro;
+    border-left: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+}
+.filename-row:hover {
+    background-color: gainsboro;
 }
 
 .selected-filename-row {

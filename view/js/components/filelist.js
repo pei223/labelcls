@@ -12,8 +12,8 @@ var filelist = Vue.component(
                 <div v-for="(fileName, index) in fileList">
                     <p @click="onSelected(index)"
                     v-bind:class="[index === selectedFileIndex ? 'selected-filename-row' : '' , 'filename-row']">{{ fileName }}</p>
-                    <div class="divider"></div>
                 </div>
+                <div class="divider"></div>
             </div>
         </div>
           `,

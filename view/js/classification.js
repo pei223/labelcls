@@ -29,7 +29,7 @@ var app = new Vue({
             <div class="row left-align">
                 <progress-bar :percent="percent" color="#388e3c" />
             </div>
-            <div class="col m3 left-align">
+            <div class="col m2 left-align">
                 <toolbox
                     :isMultiClass="isMultiClass"
                     :onChangeClassTypeClicked="changeClassType"
@@ -46,7 +46,7 @@ var app = new Vue({
                     :imageSrc="imageSrc"
                     :imageFilePath="imageFilePath" />
             </div>
-            <div class="col m3 left-align">
+            <div class="col m4 left-align">
                 <label-box
                     :labels="labels"
                     :selectedLabels="selectedLabels"
