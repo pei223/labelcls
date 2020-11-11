@@ -17,5 +17,5 @@ python run.py
 
 ## Build
 ```
-python -m eel run.py view --onefile --noconsole
+python -m eel labelcls/run.py labelcls/view --onefile --noconsole
 ```

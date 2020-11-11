@@ -68,14 +68,6 @@ def save_labels_to_file(labels: List[str]) -> bool:
 
 
 @eel.expose
-def load_progress_data():
-    filepath = tkinter.filedialog.askopenfile(filetype=[("テキストファイル", "*.txt")])
-    if filepath is None:
-        return
-    # TODO 結果CSVから辞書作成
-
-
-@eel.expose
 def write_csv_result(result_dict: Dict[str, List[int]]):
     filepath = filedialog.asksaveasfile(filetype=[("CSVファイル", "*.csv")])
     if filepath is None:
@@ -83,6 +75,7 @@ def write_csv_result(result_dict: Dict[str, List[int]]):
     filepath = filepath.name
     # TODO ファイルパスかファイル名か
     with open(filepath, "w") as file:
+        file.write("filepath,label\n")
         for item in result_dict.items():
             file.write(f"{item[0]},{','.join(item[1])}\n")
 
@@ -95,6 +88,7 @@ def read_csv_result():
     result = {}
     filepath = filepath.name
     with open(filepath, "r") as file:
+        file.readline()  # read header
         for line in file:
             line = line.replace("\n", "")
             field = line.split(",")
