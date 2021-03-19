@@ -3,7 +3,6 @@ from tkinter import filedialog
 import eel
 from pathlib import Path
 from tkinter import Tk
-import tkinter.filedialog
 from PIL import Image
 import base64
 from io import BytesIO

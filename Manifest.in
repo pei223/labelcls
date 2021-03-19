@@ -1,0 +1,4 @@
+include labelcls/view/*/*/*/*
+include labelcls/view/*/*/*
+include labelcls/view/*/*
+include labelcls/view/*
