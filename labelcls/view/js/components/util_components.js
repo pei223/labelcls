@@ -58,7 +58,7 @@ var progressBar = Vue.component(
       template: `
         <div>
             <span style="">{{ roundedPercent }}%</span>
-            <div style="height: 10px; width: 100%; border: 1px solid #9e9e9e; background-color: white;">
+            <div style="height: 10px; width: 100%; border: 1px solid #F4F4F4; background-color: white;">
                 <div v-bind:style="{ backgroundColor: color, width: percent + '%' }" style="height: 10px; position: relative;"></div>
             </div>
         </div>

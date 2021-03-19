@@ -13,21 +13,26 @@ body {
     width: 100%;
 }
 
-
 /* Toolbox */
+.toolbox {
+    margin: 0.5rem 0 1rem 0;
+     box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%)
+}
+
 .toolbox-tile {
+    background-color: white;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 110px;
+    height: 100px;
     text-align: center;
     border-top: 1px solid gainsboro;
     border-left: 1px solid gainsboro;
     border-right: 1px solid gainsboro;
 }
 .toolbox-tile:hover {
-    background-color: gainsboro;
+    background-color: #F4F4F4;
 }
 
 .btn-area {
@@ -35,8 +40,7 @@ body {
 }
 
 .toolbox-title {
-    font-size: 1.3em;
-    padding-bottom: 10px;
+    font-size: 0.9em;
     font-weight: 400;
 }
 
@@ -68,8 +72,6 @@ body {
     padding: 5px;
     cursor: pointer;
     border-top: 1px solid gainsboro;
-    border-left: 1px solid gainsboro;
-    border-right: 1px solid gainsboro;
 }
 .filename-row:hover {
     background-color: gainsboro;

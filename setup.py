@@ -24,7 +24,7 @@ setup(
     url='https://github.com/pei223/labelcls',
 
     description='Annotation tool of image classification data.',
-    long_description=open(path.join(here, 'README.md'), encoding='utf-8').read(),
+    long_description=open(path.join(here, 'pypi_README.md'), encoding='utf-8').read(),
     long_description_content_type='text/markdown',
 
     keywords='image-classification annotation annotation-tool',

@@ -9,8 +9,7 @@ var toolbox = Vue.component(
         'isMultiClass': Boolean,
       },
       template: `
-      <div class="card">
-        <div class="card-content">
+        <div class="toolbox">
             <div class="toolbox-tile" @click="onNextImageClicked">
                 <div>
                     <p class="toolbox-title">Next image<br>(right key)</p>
@@ -44,6 +43,5 @@ var toolbox = Vue.component(
             </div>
             <div class="divider"></div>
         </div>
-      </div>
           `,
 });

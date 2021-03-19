@@ -29,7 +29,7 @@ var app = new Vue({
             <div class="row left-align">
                 <progress-bar :percent="percent" color="#388e3c" />
             </div>
-            <div class="col m2 left-align">
+            <div class="col m1 left-align">
                 <toolbox
                     :isMultiClass="isMultiClass"
                     :onChangeClassTypeClicked="changeClassType"
@@ -38,7 +38,7 @@ var app = new Vue({
                     :onZoomInClicked="zoomIn"
                     :onZoomOutClicked="zoomOut" />
             </div>
-            <div class="col m6 left-align">
+            <div class="col m7 left-align">
                 <image-canvas
                     :width="width"
                     :height="height"
@@ -106,13 +106,13 @@ var app = new Vue({
   },
   methods: {
     async saveAnnotationResult() {
-        let result = await eel.write_csv_result(this.result)();
+        let result = await eel.save_csv_result(this.result)();
         this.loading = true;
         this.dialogMessage = "Succeed saving annotation result!"
         this.loading = false;
     },
     async loadAnnotationResult() {
-        let result = await eel.read_csv_result()();
+        let result = await eel.load_csv_result()();
         if(Object.keys(result).length <= 0) {
             return;
         }
@@ -124,7 +124,8 @@ var app = new Vue({
     },
     updateAnnotationResult() {
         let filepath = this.filepathList[this.selectedFileIndex];
-        this.result[filepath] = this.selectedLabels;
+        let filename = this.filepathToFilename(filepath)
+        this.result[filename] = this.selectedLabels;
     },
 
     changeClassType() {
@@ -149,14 +150,20 @@ var app = new Vue({
         this.selectedFileIndex = index;
 
         let filepath = this.filepathList[index];
-        let imageData = await eel.load_image(filepath)();
+        let imageData = await eel.load_jpeg_image_and_width_height(filepath)();
+        if(imageData === null) {
+            this.miniLoading = false;
+            this.selectedLabels = [];
+            return;
+        }
 
         this.imageSrc = imageData[0];
         this.width = imageData[1];
         this.height = imageData[2];
         this.imageFilePath = filepath
 
-        this.selectedLabels = this.result[filepath] ?? [];
+        let filename = this.filepathToFilename(filepath)
+        this.selectedLabels = this.result[filename] ?? [];
         this.miniLoading = false;
     },
     nextImage() {
@@ -171,7 +178,9 @@ var app = new Vue({
         }
         this.selectImage(this.selectedFileIndex - 1);
     },
-
+    filepathToFilename(filepath) {
+        return filepath.replace(/^.*[\\\/]/, "");
+    },
 
     // Labels
     async saveLabels() {

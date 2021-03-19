@@ -1,5 +1,5 @@
 import eel
-from labelcls.app.presenter import *
+from labelcls.app.presenter import *  # required
 import os
 import socket
 from tkinter import Tk
