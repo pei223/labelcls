@@ -76,7 +76,7 @@ def save_csv_result(result_dict: Dict[str, List[int]]):
     :param result_dict: {filepath, [labels, ...]}
     :return:
     """
-    chosen_result = filedialog.asksaveasfile(filetype=[("CSVファイル", "*.csv")])
+    chosen_result = filedialog.asksaveasfile(filetypes=[("CSVファイル", "*.csv")])
     if chosen_result is None:
         return False
     chosen_result = chosen_result.name
@@ -92,7 +92,7 @@ def load_csv_result() -> Dict[str, List[int]]:
     """
     :return: {filename, [labels, ...]}
     """
-    chosen_result = filedialog.askopenfile(filetype=[("CSVファイル", "*.csv")])
+    chosen_result = filedialog.askopenfile(filetypes=[("CSVファイル", "*.csv")])
     if chosen_result is None:
         return {}
     result = {}
