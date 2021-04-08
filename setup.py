@@ -17,7 +17,7 @@ setup(
 
     license='MIT',
 
-    version='1.1.2',
+    version='1.1.3',
 
     author='pei223',
     author_email='peidparc@gmail.com',
