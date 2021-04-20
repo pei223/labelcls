@@ -2,7 +2,12 @@
 Image classification annotation tool.
 
 <img src="https://raw.githubusercontent.com/pei223/labelcls/master/labelcls.png">
-<br><br><br>
+<br>
+
+## Install
+```
+pip install labelcls
+```
 
 ## Functions
 - Write annotation result for CSV.

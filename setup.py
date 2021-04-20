@@ -20,7 +20,7 @@ setup(
 
     license='MIT',
 
-    version='1.1.5',
+    version='1.1.6',
 
     author='pei223',
     author_email='peidparc@gmail.com',
