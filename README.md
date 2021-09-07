@@ -1,7 +1,8 @@
 ## labelcls
 Image classification annotation tool.
 
-<img src="https://raw.githubusercontent.com/pei223/labelcls/master/labelcls.png">
+![demo](https://user-images.githubusercontent.com/19645346/132350265-fd003c70-94cc-4a67-b362-8e351789be49.gif)
+
 <br>
 
 ## Install
