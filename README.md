@@ -10,6 +10,12 @@ Image classification annotation tool.
 pip install labelcls
 ```
 
+## Usage
+Run labelcls.
+```
+labelcls
+```
+
 ## Functions
 - Write annotation result for CSV.
 - Load annotation result in the middle of work.
