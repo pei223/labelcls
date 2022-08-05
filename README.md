@@ -5,12 +5,27 @@ Image classification annotation tool.
 
 <br>
 
+## Requirements
+
+Install `tkinter` library on Linux (Ubuntu)
+
+```
+sudo apt-get install python3-tk
+```
+
+
 ## Install
 ```
 pip install labelcls
 ```
 
 ## Usage
+
+Export the `labelcls` to path:
+```
+export PATH="$HOME/bin:$PATH"
+```
+
 Run labelcls.
 ```
 labelcls
